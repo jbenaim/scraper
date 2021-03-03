@@ -6,7 +6,6 @@ import requests
 from PIL import Image
 import hashlib
 import os
-
 DRIVER_PATH = './chromedriver 2'
 
 wd = webdriver.Chrome(executable_path=DRIVER_PATH)
@@ -97,9 +96,3 @@ def search_and_download(search_term:str,driver_path:str,target_path='./images',n
         persist_image(target_folder,elem)
 
 
-search_term = 'dog'
-
-search_and_download(
-  search_term=search_term, 
-  driver_path=DRIVER_PATH
-)
